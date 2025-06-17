@@ -1,0 +1,93 @@
+{
+  "event": {
+    "title": "Laura - 70 Años de Sabiduría Eterna",
+    "subtitle": "Celebrando la vida de quien nos enseñó que el amor trasciende el tiempo",
+    "honoree": "Laura",
+    "description": "Las cartas del destino nos reúnen para celebrar la vida de quien nos enseñó que el amor trasciende el tiempo y el espacio. Hoy honramos su memoria, su sabiduría y el legado eterno que vive en cada uno de nosotros.",
+    "age_celebration": 70,
+    "age_at_passing": 44,
+    "special_talent": "Lectora de cartas del tarot"
+  },
+  "date_time": {
+    "day": "Sábado",
+    "date": "28 de junio",
+    "time": "13:30 hrs",
+    "formatted_date": "Sábado 28 de junio, 13:30 hrs"
+  },
+  "location": {
+    "address": "Av. Rukan 315, casa 52",
+    "city": "Colina",
+    "full_address": "Av. Rukan 315, casa 52, Colina"
+  },
+  "photos": [
+    {
+      "id": "photo1",
+      "url": "https://page1.genspark.site/v1/base64_upload/bfe0d74ab25f11a2ec6ebd0414e184e0",
+      "description": "Laura en la playa con sweater blanco",
+      "caption": "Momentos de serenidad"
+    },
+    {
+      "id": "photo2", 
+      "url": "https://page1.genspark.site/v1/base64_upload/5b80bbd65d7bd6ecabeee741b3a17bf7",
+      "description": "Laura con sus hijos en la playa",
+      "caption": "Unidos por siempre"
+    },
+    {
+      "id": "photo3",
+      "url": "https://page1.genspark.site/v1/base64_upload/c8d3dbc7aa0bea1273d30cafaed5b4eb",
+      "description": "Laura con sus hijos en casa",
+      "caption": "Hogar lleno de amor"
+    }
+  ],
+  "design": {
+    "theme": "mystic_tarot",
+    "primary_colors": ["#4c1d95", "#7c3aed", "#a855f7"],
+    "accent_colors": ["#fbbf24", "#f59e0b", "#d97706"],
+    "background_colors": ["#1a1a2e", "#16213e", "#0f172a"],
+    "fonts": {
+      "primary": "Cinzel, serif",
+      "secondary": "Cormorant Garamond, serif"
+    },
+    "symbols": [
+      "moon", "stars", "infinity", "heart", "tarot_cards", 
+      "crystal_ball", "zodiac_signs", "mystical_borders"
+    ]
+  },
+  "tarot_elements": {
+    "cards": [
+      {
+        "name": "La Estrella",
+        "symbol": "⭐",
+        "meaning": "Esperanza y guía espiritual"
+      },
+      {
+        "name": "El Amor",
+        "symbol": "💜",
+        "meaning": "Amor incondicional y eterno"
+      },
+      {
+        "name": "La Eternidad",
+        "symbol": "∞",
+        "meaning": "Legado que perdura para siempre"
+      }
+    ],
+    "astrological_symbols": ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"]
+  },
+  "messages": {
+    "main_title": "Laura",
+    "celebration_title": "70 Años de Sabiduría Eterna",
+    "memories_section": "Recuerdos del Corazón",
+    "event_details": "Detalles del Encuentro",
+    "closing_message": "Su luz sigue brillando en nuestros corazones"
+  },
+  "responsive_config": {
+    "mobile_breakpoint": "768px",
+    "tablet_breakpoint": "1024px",
+    "desktop_breakpoint": "1280px"
+  },
+  "github_pages": {
+    "repository_name": "laura-70-celebration",
+    "domain": "tu-usuario.github.io/laura-70-celebration",
+    "build_command": "Built with HTML5, CSS3, and responsive design"
+  }
+}

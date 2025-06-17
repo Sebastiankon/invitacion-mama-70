@@ -3,305 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laura - 70 Años de Sabiduría Eterna</title>
+    <title>Laura - 70 Años de Amor Eterno</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            color: #e6d7ff;
-            line-height: 1.6;
-            overflow-x: hidden;
         }
         
-        .mystical-bg {
-            background: radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+        .mystical-border {
+            background: linear-gradient(45deg, #ffd700, #e6e6fa, #ffd700, #e6e6fa);
+            background-size: 400% 400%;
+            animation: shimmer 3s ease-in-out infinite;
+            padding: 2px;
+            border-radius: 20px;
         }
         
-        .title-font {
-            font-family: 'Cinzel', serif;
-        }
-        
-        .card-mystical {
-            background: rgba(30, 30, 60, 0.7);
+        .mystical-card {
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(147, 51, 234, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
-        .golden-text {
-            color: #ffd700;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
         
-        .purple-glow {
-            color: #e6d7ff;
-            text-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+        .title-text {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 2s ease-in-out infinite;
+        }
+        
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% center; }
+            50% { background-position: 100% center; }
         }
         
         .photo-container {
             position: relative;
             overflow: hidden;
-            border-radius: 50%;
-            border: 3px solid #ffd700;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .photo-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
         
         .photo-container img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
+            height: 250px;
+            object-fit: contain;
+            object-position: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
         
-        .photo-container:hover img {
-            transform: scale(1.05);
-        }
-        
-        .mystical-icon {
+        .star-decoration {
+            position: absolute;
             color: #ffd700;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-            animation: mysticalGlow 2s ease-in-out infinite alternate;
+            opacity: 0.6;
+            animation: twinkle 2s ease-in-out infinite;
         }
         
-        @keyframes mysticalGlow {
-            from { opacity: 0.7; }
-            to { opacity: 1; }
-        }
-        
-        .floating-element {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
         
         .event-info {
-            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
-            border-left: 4px solid #ffd700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
         }
         
-        @media (max-width: 640px) {
-            .text-responsive {
-                font-size: 1rem;
-            }
-            
-            .title-responsive {
-                font-size: 2rem;
-            }
-            
-            .subtitle-responsive {
-                font-size: 1.25rem;
+        .event-info::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ffd700, transparent, #ffd700, transparent);
+            z-index: -1;
+            border-radius: 17px;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .photo-container img {
+                height: 200px;
             }
         }
         
-        /* Ensure smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Print styles for PDF export */
         @media print {
             body {
                 background: white !important;
-                color: black !important;
             }
-            
-            .mystical-bg {
-                background: none !important;
-            }
-            
-            .card-mystical {
+            .mystical-border, .mystical-card {
                 background: white !important;
-                border: 1px solid #ccc !important;
                 box-shadow: none !important;
             }
         }
     </style>
 </head>
-<body class="mystical-bg">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <!-- Header with mystical elements -->
-        <div class="text-center mb-12">
-            <div class="flex justify-center items-center mb-6">
-                <i class="fas fa-moon mystical-icon text-3xl mr-4 floating-element"></i>
-                <h1 class="title-font text-5xl md:text-6xl lg:text-7xl font-bold golden-text title-responsive">Laura</h1>
-                <i class="fas fa-star mystical-icon text-3xl ml-4 floating-element"></i>
-            </div>
-            
-            <div class="flex justify-center items-center mb-8">
-                <i class="fas fa-infinity mystical-icon text-2xl mr-3"></i>
-                <h2 class="title-font text-3xl md:text-4xl purple-glow subtitle-responsive">70 Años de Sabiduría Eterna</h2>
-                <i class="fas fa-infinity mystical-icon text-2xl ml-3"></i>
-            </div>
-            
-            <div class="card-mystical rounded-2xl p-6 mb-8">
-                <p class="text-lg md:text-xl text-center italic text-responsive">
-                    "Las cartas del destino nos reúnen para celebrar la vida de quien nos enseñó que el amor trasciende el tiempo y el espacio. Hoy honramos su memoria, su sabiduría y el legado eterno que vive en cada uno de nosotros."
-                </p>
-            </div>
-        </div>
-
-        <!-- Photos Section -->
-        <div class="mb-12">
-            <div class="text-center mb-8">
-                <h3 class="title-font text-2xl md:text-3xl golden-text mb-4">
-                    <i class="fas fa-heart mystical-icon mr-2"></i>
-                    Recuerdos del Corazón
-                    <i class="fas fa-heart mystical-icon ml-2"></i>
-                </h3>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <!-- Photo 1 -->
-                <div class="text-center">
-                    <div class="photo-container w-48 h-48 mx-auto mb-4">
-                        <img src="https://page1.genspark.site/v1/base64_upload/bfe0d74ab25f11a2ec6ebd0414e184e0" 
-                             alt="Laura en la playa con sweater blanco" 
-                             loading="lazy">
+<body class="p-4">
+    <div class="max-w-4xl mx-auto">
+        <div class="mystical-border">
+            <div class="mystical-card p-8">
+                <!-- Decorative stars -->
+                <div class="star-decoration" style="top: 20px; left: 20px; font-size: 20px;">✨</div>
+                <div class="star-decoration" style="top: 20px; right: 20px; font-size: 16px; animation-delay: 1s;">⭐</div>
+                <div class="star-decoration" style="bottom: 20px; left: 30px; font-size: 18px; animation-delay: 0.5s;">🌟</div>
+                <div class="star-decoration" style="bottom: 20px; right: 30px; font-size: 22px; animation-delay: 1.5s;">✨</div>
+                
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="title-text text-5xl md:text-6xl font-bold mb-4">Laura</h1>
+                    <div class="text-2xl md:text-3xl text-gray-700 font-light">
+                        Celebrando 70 Años de Amor Eterno
                     </div>
-                    <div class="card-mystical rounded-lg p-4">
-                        <h4 class="golden-text font-semibold text-lg mb-2">Momentos de Serenidad</h4>
-                        <p class="text-purple-200 text-responsive">Sus ojos reflejaban la sabiduría del océano</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mt-4 rounded-full"></div>
+                </div>
+                
+                <!-- Photos Section -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Recuerdos del Corazón</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="photo-container">
+                            <img src="https://page1.genspark.site/v1/base64_upload/bfe0d74ab25f11a2ec6ebd0414e184e0" alt="Laura en momentos de serenidad" />
+                        </div>
+                        <div class="photo-container">
+                            <img src="https://page1.genspark.site/v1/base64_upload/5b80bbd65d7bd6ecabeee741b3a17bf7" alt="Laura con la familia en la playa" />
+                        </div>
+                        <div class="photo-container">
+                            <img src="https://page1.genspark.site/v1/base64_upload/c8d3dbc7aa0bea1273d30cafaed5b4eb" alt="Laura y sus hijos en casa" />
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Photo 2 -->
-                <div class="text-center">
-                    <div class="photo-container w-48 h-48 mx-auto mb-4">
-                        <img src="https://page1.genspark.site/v1/base64_upload/5b80bbd65d7bd6ecabeee741b3a17bf7" 
-                             alt="Laura con sus hijos en la playa" 
-                             loading="lazy">
-                    </div>
-                    <div class="card-mystical rounded-lg p-4">
-                        <h4 class="golden-text font-semibold text-lg mb-2">Unidos por Siempre</h4>
-                        <p class="text-purple-200 text-responsive">El amor familiar que nunca se desvanece</p>
-                    </div>
-                </div>
-                
-                <!-- Photo 3 -->
-                <div class="text-center">
-                    <div class="photo-container w-48 h-48 mx-auto mb-4">
-                        <img src="https://page1.genspark.site/v1/base64_upload/c8d3dbc7aa0bea1273d30cafaed5b4eb" 
-                             alt="Laura con sus hijos en casa" 
-                             loading="lazy">
-                    </div>
-                    <div class="card-mystical rounded-lg p-4">
-                        <h4 class="golden-text font-semibold text-lg mb-2">Hogar Lleno de Amor</h4>
-                        <p class="text-purple-200 text-responsive">Donde cada abrazo era una bendición</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tarot Elements Section -->
-        <div class="mb-12">
-            <div class="text-center mb-8">
-                <h3 class="title-font text-2xl md:text-3xl golden-text mb-6">
-                    <i class="fas fa-magic mystical-icon mr-2"></i>
-                    Su Don Místico
-                    <i class="fas fa-magic mystical-icon ml-2"></i>
-                </h3>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-6 mb-8">
-                <!-- Tarot Cards -->
-                <div class="card-mystical rounded-xl p-6 text-center w-32 h-40 flex flex-col justify-center items-center">
-                    <i class="fas fa-star mystical-icon text-3xl mb-2"></i>
-                    <p class="golden-text font-semibold">La Estrella</p>
-                    <p class="text-purple-200 text-sm">Esperanza</p>
-                </div>
-                
-                <div class="card-mystical rounded-xl p-6 text-center w-32 h-40 flex flex-col justify-center items-center">
-                    <i class="fas fa-heart mystical-icon text-3xl mb-2"></i>
-                    <p class="golden-text font-semibold">El Amor</p>
-                    <p class="text-purple-200 text-sm">Conexión</p>
-                </div>
-                
-                <div class="card-mystical rounded-xl p-6 text-center w-32 h-40 flex flex-col justify-center items-center">
-                    <i class="fas fa-infinity mystical-icon text-3xl mb-2"></i>
-                    <p class="golden-text font-semibold">La Eternidad</p>
-                    <p class="text-purple-200 text-sm">Legado</p>
-                </div>
-            </div>
-            
-            <div class="card-mystical rounded-2xl p-6 text-center">
-                <p class="text-lg md:text-xl italic text-purple-100 text-responsive">
-                    "Con sus cartas iluminaba caminos, revelaba secretos del corazón y guiaba almas perdidas hacia la luz. Su don trasciende el tiempo, viviendo eternamente en quienes la amamos."
-                </p>
-            </div>
-        </div>
-
-        <!-- Event Information -->
-        <div class="mb-12">
-            <div class="text-center mb-8">
-                <h3 class="title-font text-2xl md:text-3xl golden-text mb-4">
-                    <i class="fas fa-calendar-alt mystical-icon mr-2"></i>
-                    Celebración de su Vida
-                    <i class="fas fa-calendar-alt mystical-icon ml-2"></i>
-                </h3>
-            </div>
-            
-            <div class="card-mystical rounded-2xl p-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="event-info rounded-lg p-6">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-clock mystical-icon text-2xl mr-3"></i>
-                            <div>
-                                <h4 class="golden-text font-semibold text-xl">Fecha y Hora</h4>
-                                <p class="text-purple-200 text-lg text-responsive">Sábado 28 de Junio</p>
-                                <p class="text-purple-200 text-lg text-responsive">13:30 hrs</p>
-                            </div>
+                <!-- Event Information -->
+                <div class="event-info text-center">
+                    <h2 class="text-2xl font-bold mb-4">🔮 Celebración Familiar 🔮</h2>
+                    <div class="space-y-3 text-lg">
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-2xl">📅</span>
+                            <span class="font-semibold">Sábado 28 de Junio</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-2xl">🕜</span>
+                            <span class="font-semibold">13:30 hrs</span>
+                        </div>
+                        <div class="flex items-center justify-center space-x-2">
+                            <span class="text-2xl">🏡</span>
+                            <span class="font-semibold">Av. Rukan 315, Casa 52, Colina</span>
                         </div>
                     </div>
                     
-                    <div class="event-info rounded-lg p-6">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-map-marker-alt mystical-icon text-2xl mr-3"></i>
-                            <div>
-                                <h4 class="golden-text font-semibold text-xl">Lugar</h4>
-                                <p class="text-purple-200 text-lg text-responsive">Av. Rukan 315</p>
-                                <p class="text-purple-200 text-lg text-responsive">Casa 52, Colina</p>
-                            </div>
-                        </div>
+                    <div class="mt-6 pt-4 border-t border-white border-opacity-30">
+                        <p class="text-lg italic">
+                            "Nos reunimos para honrar su memoria y celebrar el amor que sigue viviendo en cada uno de nosotros"
+                        </p>
                     </div>
                 </div>
                 
-                <div class="text-center mt-8 pt-6 border-t border-purple-300">
-                    <p class="text-xl md:text-2xl italic golden-text text-responsive">
-                        "Reunámonos para celebrar 70 años de una vida extraordinaria, honrando la memoria de quien nos enseñó que el amor verdadero es eterno."
-                    </p>
+                <!-- Footer decoration -->
+                <div class="text-center mt-8">
+                    <div class="flex justify-center space-x-4 text-3xl opacity-60">
+                        <span>🌙</span>
+                        <span>⭐</span>
+                        <span>🔮</span>
+                        <span>⭐</span>
+                        <span>🌙</span>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Footer with mystical elements -->
-        <div class="text-center">
-            <div class="flex justify-center items-center mb-6">
-                <i class="fas fa-moon mystical-icon text-2xl mr-4"></i>
-                <i class="fas fa-star mystical-icon text-3xl mx-2"></i>
-                <i class="fas fa-heart mystical-icon text-2xl mx-2"></i>
-                <i class="fas fa-star mystical-icon text-3xl mx-2"></i>
-                <i class="fas fa-sun mystical-icon text-2xl ml-4"></i>
-            </div>
-            
-            <div class="card-mystical rounded-xl p-6">
-                <p class="text-lg italic purple-glow text-responsive">
-                    "En el cielo de los recuerdos, Laura sigue siendo nuestra estrella más brillante"
-                </p>
             </div>
         </div>
     </div>
